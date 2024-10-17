@@ -11,10 +11,12 @@ window.onload = function() {
   let noun = ["athlete", "dog"];
 
   function domainGenerator() {
-    for (let i = 0; i < pronoun.length; i++) {
-      for (let j = 0; j < adj.length; j++) {
-        for (let r = 0; r < noun.length; r++) {
-          console.log(pronoun[i] + adj[j] + noun[r] + ".com");
+    for (let p of pronoun) {
+      for (let a of adj) {
+        for (let n of noun) {
+          document.querySelector("p").innerHTML += `<h2>
+              ${p}${a}${n}.com
+            </h2>`;
         }
       }
     }
